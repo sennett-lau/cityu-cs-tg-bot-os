@@ -1,0 +1,65 @@
+2022-10-31 00:13
+deleted unused code
+
+2022-08-07 17:55
+deleted IG related functions due to new IG policies
+
+2022-03-06 17:58
+added try except for ig tracking function
+
+2022-01-23 01:16
+added /nhk command
+
+2021-12-26 18:20
+added /cbc and /edb command
+
+2021-12-15 01:03
+added /cityuinfo command
+
+2021-12-10 03:25
+added /css and /su command
+
+2021-12-04 02:44
+added CoinGecko url for /crypto
+
+2021-12-03 03:43
+added /crypto command
+
+2021-11-30 21:03
+added welcoming message
+
+2021-11-30 03:45
+added /launchbot, /pin, updated /help
+
+2021-11-30 00:50
+added /my903 command
+
+2021-11-29 22:04
+added caption for wantpokemon
+
+2021-11-29 19:20
+bugfix conversation handler, callback limitation
+
+2021-11-29 15:45
+run in 6 threads
+
+2021-11-29 04:55
+added CS3481 source
+
+2021-11-29 01:32
+added /wantpokemon command
+
+2021-11-28 02:50
+added ig post auto track
+
+2021-11-26 20:58
+added /geguide command
+
+2021-11-26 20:20
+added /updatelog command
+
+2021-11-26 03:00
+CS3334 coding question update
+
+2021-11-26 00:00
+bot launched with get source function

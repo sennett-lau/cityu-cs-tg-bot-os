@@ -1,0 +1,3 @@
+/source 攞你想要嘅source
+/pin 睇下入學攻略！
+/help 睇埋其他command

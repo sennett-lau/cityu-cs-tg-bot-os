@@ -1,0 +1,13 @@
+Group command如下：
+/help - 查下有咩command
+/launchbot - 同bot dm 用private command
+/updatelog - 睇下有咩update
+/geguide - 加個course code嚟攞link
+/wantpokemon - 隨機睇隻pokemon
+/my903 睇903專業推介top10
+/crypto - 查下crypto價格
+
+Private command:
+/start - 了解private mode下嘅其他command
+/source 攞你想要嘅source
+/pin 睇下入學攻略！
