@@ -5,15 +5,14 @@ from telegram.ext import Updater, MessageHandler
 
 from commands.hub import *
 from conversations.hub import *
-from messagehandlers.hub import *
-from modules.utils import *
+from message_handlers.hub import *
+from modules.hub import *
 
 load_dotenv()
 
 APP_ENV_IS_TEST = True if os.environ.get("APP_ENV") == 'test' else False
 TOKEN = os.environ.get("TOKEN")
 PORT = int(os.environ.get("PORT", "8443"))
-
 
 def main():
     print('=======================================================')
