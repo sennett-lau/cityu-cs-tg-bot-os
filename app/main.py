@@ -49,13 +49,7 @@ def main():
     dp.add_error_handler(error)
 
     # Start the Bot
-    if APP_ENV != 'prd':
-        updater.start_polling()
-    else:
-        updater.start_webhook(listen="0.0.0.0",
-                              port=int(PORT),
-                              url_path=TOKEN)
-        updater.bot.setWebhook('https://citycs-tg-bot.herokuapp.com/' + TOKEN)
+    updater.start_polling()
 
     updater.idle()
 
