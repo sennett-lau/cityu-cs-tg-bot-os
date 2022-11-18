@@ -1,2 +1,2 @@
-from .message_handlers.msg_remove_member import *
-from .message_handlers.msg_welcome import *
+from .msg_remove_member import *
+from .msg_welcome import *

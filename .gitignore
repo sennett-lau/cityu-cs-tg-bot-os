@@ -292,3 +292,4 @@ cython_debug/
 .history
 .ionide
 
+app/.env

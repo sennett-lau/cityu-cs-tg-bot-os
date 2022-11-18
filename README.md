@@ -114,7 +114,7 @@ For developing, a local environment is recommended. A testing bot is available a
 Adding new commands, conversations, message handlers, or modules, please always place them in the corresponding folder and import them to the `hub.py` file.
 ```python
 # e.g. in app/commands/hub.py
-from .commands.cmd_crypto import *
+from .cmd_crypto import *
 ```
 Those file should then be imported to the `main.py` file or other files by importing through the `hub.py` file.
 <br/>
@@ -136,9 +136,9 @@ e.g. app/conversations/conv_source.py
 ```
 e.g. app/message_handlers/msg_source.py
 ```
-- Modules: `<module_name>`
+- Modules: `module_` + `<module_name>`
 ```
-e.g. app/modules/modules_utils.py
+e.g. app/modules/module_utils.py
 ```
 
 #### Naming Convention for Functions

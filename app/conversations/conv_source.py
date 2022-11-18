@@ -1,9 +1,11 @@
 import requests
+import sys
 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import CommandHandler, Filters, CallbackQueryHandler, ConversationHandler
 
-from modules.utils import end
+sys.path.append('../modules')
+from modules.hub import *
 
 Subject, Type, File = range(3)
 

@@ -10,13 +10,13 @@ from modules.hub import *
 
 load_dotenv()
 
-APP_ENV_IS_TEST = True if os.environ.get("APP_ENV") == 'test' else False
+APP_ENV = os.getenv('APP_ENV') # prd / dev
 TOKEN = os.environ.get("TOKEN")
 PORT = int(os.environ.get("PORT", "8443"))
 
 def main():
     print('=======================================================')
-    if APP_ENV_IS_TEST:
+    if APP_ENV != 'prd':
         print('Testing Environment...')
     else:
         print('Product Environment...')
@@ -49,7 +49,7 @@ def main():
     dp.add_error_handler(error)
 
     # Start the Bot
-    if APP_ENV_IS_TEST:
+    if APP_ENV != 'prd':
         updater.start_polling()
     else:
         updater.start_webhook(listen="0.0.0.0",
