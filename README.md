@@ -157,10 +157,11 @@ def get_crypto_price():
 ```
 
 #### For new source files
-Please contact the author of the project to add new source files to the project.
+Please contact the [author](https://t.me/xiii_xiii_xx) of the project through Telegram to add new source files to the project.
 
 ## Contributing
 
+### General Steps
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the project
@@ -168,3 +169,5 @@ Contributions are what make the open source community such an amazing place to l
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a pull request
+
+For any question, please contact the [author](https://t.me/xiii_xiii_xx) through Telegram.
