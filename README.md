@@ -9,10 +9,12 @@ An open source Telegram bot project for CityU CS Telegram Group
 - [Installation](#installation)
   - [Run Locally](#run-locally)
   - [Run with Docker](#run-with-docker)
-- [Roadmap](#roadmap)
-  - [Polling feature](#polling-feature)
-  - [Instagram post fetcher](#instagram-post-fetcher)
-  - [Lyrics guesser](#lyrics-guesser)
+- [Roadmap](#roadmap) 
+  - [Features](#features)
+    - [Polling feature](#polling-feature)
+    - [Instagram post fetcher](#instagram-post-fetcher)
+    - [Lyrics guesser](#lyrics-guesser)
+  - [Others](#others)
 - [Usage](#usage)
   - [Starting](#starting)
   - [New Functionality](#new-functionality)
@@ -68,27 +70,29 @@ An open source Telegram bot project for CityU CS Telegram Group
 
 ## Roadmap
 
-### Polling feature
+### Features
 
-#### Description
+#### Polling feature
+
+##### Description
 Polling system that allow users to create polls and vote for polls.
 
-#### Possible Commands
+##### Possible Commands
 - `/poll` - Create a new poll
 - `/vote` - Vote for a poll
 - `/endpoll` - End a poll
 - `/result` - Show the result of a poll
 
-### Instagram post fetcher
+#### Instagram post fetcher
 
-#### Description
+##### Description
 Fetch the latest post from CityU related Instagram account and send it to the group when there is a new post.
 
-#### Possible Commands
+##### Possible Commands
 - `/insta` - Fetch the latest post from CityU related Instagram account
 - `/insta <account>` - Fetch the latest post from the specified account
 
-#### Accounts
+##### Accounts
 - [cityucss_binary01](https://www.instagram.com/cityucss_binary01/)
 - [hkcityu.info](https://www.instagram.com/hkcityu.info/)
 - [cityusu](https://www.instagram.com/cityusu/)
@@ -97,13 +101,15 @@ Fetch the latest post from CityU related Instagram account and send it to the gr
 - [cityusu.cbc](https://www.instagram.com/cityusu.cbc/)
 - [cityusu_welfare](https://www.instagram.com/cityusu_welfare/)
 
-### Lyrics guesser
+#### Lyrics guesser
 
-#### Description
+##### Description
 Request the lyrics of a song from the bot, allowing users to guess the song by replying the lyrics message.
 
-#### Possible Commands
+##### Possible Commands
 - `/lyrics` - Request the lyrics of a song from the bot
+
+### Others
 
 ## Usage
 
