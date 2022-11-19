@@ -9,16 +9,21 @@ An open source Telegram bot project for CityU CS Telegram Group
 - [Installation](#installation)
   - [Run Locally](#run-locally)
   - [Run with Docker](#run-with-docker)
-- [Roadmap](#roadmap) 
+- [Roadmap & Todos](#roadmap-&-todos)
   - [Features](#features)
-    - [Polling feature](#polling-feature)
-    - [Instagram post fetcher](#instagram-post-fetcher)
-    - [Lyrics guesser](#lyrics-guesser)
+    - [Contribution Guide](#contribution-guide)
+    - [Deployment Announcer](#deployment-announcer)
+    - [Polling Feature](#polling-feature)
+    - [Instagram Post Fetcher](#instagram-post-fetcher)
+    - [Lyrics Guesser](#lyrics-guesser)
   - [Others](#others)
+    - [README Refinement](#readme-refinement)
+    - [CI CD Pipeline](#ci-cd-pipeline))] 
 - [Usage](#usage)
   - [Starting](#starting)
   - [New Functionality](#new-functionality)
   - [Code Style and Naming Convention](#code-style-and-naming-convention)
+  - [For new source files](#for-new-source-files)
 - [Contributing](#contributing)
 
 ## File Structure
@@ -72,7 +77,21 @@ An open source Telegram bot project for CityU CS Telegram Group
 
 ### Features
 
-#### Polling feature
+#### Contribution Guide
+
+#### Description
+Show the contributors of the bot and prompt the Github link of the bot.
+
+#### Possible Commands
+- `/contribute` - Prompt the Github link of the bot.
+- `/contribution` - Show the contributors of the bot
+
+#### Deployment Announcer
+
+#### Description
+Show the version and potentially the latest update log of the bot when the bot is newly deployed.
+
+#### Polling Feature
 
 ##### Description
 Polling system that allow users to create polls and vote for polls.
@@ -83,7 +102,7 @@ Polling system that allow users to create polls and vote for polls.
 - `/endpoll` - End a poll
 - `/result` - Show the result of a poll
 
-#### Instagram post fetcher
+#### Instagram Post Fetcher
 
 ##### Description
 Fetch the latest post from CityU related Instagram account and send it to the group when there is a new post.
@@ -101,7 +120,7 @@ Fetch the latest post from CityU related Instagram account and send it to the gr
 - [cityusu.cbc](https://www.instagram.com/cityusu.cbc/)
 - [cityusu_welfare](https://www.instagram.com/cityusu_welfare/)
 
-#### Lyrics guesser
+#### Lyrics Guesser
 
 ##### Description
 Request the lyrics of a song from the bot, allowing users to guess the song by replying the lyrics message.
@@ -110,6 +129,24 @@ Request the lyrics of a song from the bot, allowing users to guess the song by r
 - `/lyrics` - Request the lyrics of a song from the bot
 
 ### Others
+
+#### README Refinement
+
+##### Description
+Refine the README.md file sections with better readability and align the text style.
+
+#### CI CD Pipeline
+
+##### Description
+Add CI/CD pipeline to the project. The environment of the hosting server would be either Windows or Linux in a local machine.
+<br/>
+Following steps should be included in the pipeline:
+1. Monitor the repository for any changes in the `master` branch
+2. Pull the latest code from the `master` branch
+3. Delete the old docker image
+4. Build a new docker image with the latest code
+5. Stop and remove the old docker container
+6. Run a new docker container with the new docker image
 
 ## Usage
 
