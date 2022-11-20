@@ -8,7 +8,7 @@ An open source Telegram bot project for CityU CS Telegram Group
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
   - [Run Locally](#run-locally)
-  - [Run with Docker](#run-with-docker)
+  - [Docker Support](#docker-support)
 - [Roadmap & Todos](#roadmap-&-todos)
   - [Features](#features)
     - [Contribution Guide](#contribution-guide)
@@ -68,7 +68,7 @@ An open source Telegram bot project for CityU CS Telegram Group
 4. Run `pip install -r requirements.txt` to install all the required packages in your local environment
 5. Run `python main.py` to start the bot for testing
 
-### Run with Docker
+### Docker Support
 
 ## Roadmap
 
