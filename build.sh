@@ -1,4 +1,2 @@
-#! /bin/bash
-
-# Build docker file
-docker build -t cityu-cs-tg-bot .
+docker rmi cityu-cs-tg-bot:latest
+docker build -t cityu-cs-tg-bot:latest .
