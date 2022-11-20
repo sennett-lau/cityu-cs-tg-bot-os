@@ -69,9 +69,6 @@ An open source Telegram bot project for CityU CS Telegram Group
 5. Run `python main.py` to start the bot for testing
 
 ### Run with Docker
-1. Clone the repository
-2. Run `build.sh` to build the docker image
-3. Run `run.sh` to run the docker container
 
 ## Roadmap
 
