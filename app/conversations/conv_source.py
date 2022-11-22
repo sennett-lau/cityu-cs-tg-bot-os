@@ -1,6 +1,6 @@
-import requests
 import sys
 
+from os.path import dirname, abspath
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import CommandHandler, Filters, CallbackQueryHandler, ConversationHandler
 
@@ -105,11 +105,11 @@ def file_handler(update, context):
     global file_subject
     global file_type
 
-    path = "https://github.com/laub1199/cityu-cs-tg-bot/raw/master/source/"
-    document = path + '{}/{}/'.format(file_subject, file_type) + str(query.data)
+    source_dir = dirname(dirname(abspath(__file__)))
 
-    if '.cpp' in query.data:
-        document = requests.get(document).content
+    document = source_dir + '/source/{}/{}/'.format(file_subject, file_type) + str(query.data)
+
+    document = open(document, 'rb')
 
     query.edit_message_text(text="Selected option: {}".format(query.data))
 
