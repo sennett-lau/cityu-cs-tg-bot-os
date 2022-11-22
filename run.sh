@@ -1,1 +1,0 @@
-docker run -d --name cityu-cs-tg-bot cityu-cs-tg-bot

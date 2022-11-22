@@ -7,7 +7,7 @@ An open source Telegram bot project for CityU CS Telegram Group
 - [File Structure](#file-structure)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-  - [Run Locally](#run-locally)
+  - [Run with Python](#run-with-python)
   - [Docker Support](#docker-support)
 - [Roadmap & Todos](#roadmap-&-todos)
   - [Features](#features)
@@ -18,7 +18,6 @@ An open source Telegram bot project for CityU CS Telegram Group
     - [Lyrics Guesser](#lyrics-guesser)
   - [Others](#others)
     - [README Refinement](#readme-refinement)
-    - [CI CD Pipeline](#ci-cd-pipeline))] 
 - [Usage](#usage)
   - [Starting](#starting)
   - [New Functionality](#new-functionality)
@@ -60,15 +59,30 @@ An open source Telegram bot project for CityU CS Telegram Group
 - [Docker](https://www.docker.com/)
 
 ## Installation
-
-### Run Locally
 1. Clone the repository
-2. Go into the `app` folder
-3. Copy `.env.dev` to `.env`
-4. Run `pip install -r requirements.txt` to install all the required packages in your local environment
-5. Run `python main.py` to start the bot for testing
+2. Copy `/app/.env.dev` to `/app/.env`
+
+### Run with Python
+1. Run `pip install -r /app/requirements.txt` to install all the required packages in your local environment
+2. Run `python /app/main.py` to start the bot for testing
 
 ### Docker Support
+1. To remove the built image, run:
+```shell
+docker rmi cityu-cs-tg-bot:latest
+```
+2. To remove the built container, run:
+```shell
+docker rm $(docker stop $(docker ps -a -q --filter ancestor=cityu-cs-tg-bot --format="{{.ID}}"))
+```
+3. To build the docker image, run:
+```shell
+docker build -t cityu-cs-tg-bot:latest .
+```
+4. To run the docker container, run:
+```shell
+docker run -d --name cityu-cs-tg-bot cityu-cs-tg-bot
+```
 
 ## Roadmap
 
@@ -131,19 +145,6 @@ Request the lyrics of a song from the bot, allowing users to guess the song by r
 
 ##### Description
 Refine the README.md file sections with better readability and align the text style.
-
-#### CI CD Pipeline
-
-##### Description
-Add CI/CD pipeline to the project. The environment of the hosting server would be either Windows or Linux in a local machine.
-<br/>
-Following steps should be included in the pipeline:
-1. Monitor the repository for any changes in the `master` branch
-2. Pull the latest code from the `master` branch
-3. Delete the old docker image
-4. Build a new docker image with the latest code
-5. Stop and remove the old docker container
-6. Run a new docker container with the new docker image
 
 ## Usage
 
