@@ -1,2 +1,2 @@
 from .module_utils import *
-from .module_wourld_cup import *
+from .module_world_cup import *
