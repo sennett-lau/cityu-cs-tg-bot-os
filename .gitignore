@@ -295,4 +295,5 @@ cython_debug/
 .ionide
 
 app/.env
+app/.env.prd
 app/source
