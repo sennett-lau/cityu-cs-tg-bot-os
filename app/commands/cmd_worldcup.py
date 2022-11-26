@@ -28,9 +28,9 @@ def worldcup(update, context):
         worldcup_error(update, context)
 def worldcup_help(update, context):
     text = '⚽World Cup 2022 Functions are now LIVE!🏆\n\n'
-    text += '/worldcup tdy - Get today\'s matches'
-    text += '/worldcup ytd - Get yesterday\'s matches'
-    text += '/worldcup tmr - Get tomorrow\'s matches'
+    text += '/worldcup tdy - Get today\'s matches\n'
+    text += '/worldcup ytd - Get yesterday\'s matches\n'
+    text += '/worldcup tmr - Get tomorrow\'s matches\n'
     update.message.reply_text(text)
 
 def worldcup_error(update, context):
