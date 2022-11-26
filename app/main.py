@@ -66,4 +66,5 @@ geguide - get quick link to ge guide
 wantpokemon - send you a pokemon!
 my903 - check out this week's top 10 songs
 crypto - check crypto price
+worldcup - check world cup 2022 info
 '''

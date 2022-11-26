@@ -1,3 +1,7 @@
+2022-11-27 01:07
+added /worldcup ytd and /worldcup tmr command
+modified /worldcup today to /worldcup tdy command
+
 2022-11-25 01:00
 added /worldcup and /worldcup today command
 
