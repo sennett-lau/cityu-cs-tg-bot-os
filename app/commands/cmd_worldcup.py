@@ -28,10 +28,15 @@ def worldcup(update, context):
         jwt = wc_api_login()
         worldcup_tmr(update, context, jwt)
     elif context.args[0] == 'standings':
+        letter = context.args[1].upper()
+        if not bool(groupLetter(letter)):
+            update.message.reply_text('Invalid Input, Please input /worldcup standings [Group]. Group A to H')
+            return
         jwt = wc_api_login()
-        worldcup_standing(update, context, jwt, context.args[1])
+        worldcup_standing(update, context, jwt, letter)
     else:
         worldcup_error(update, context)
+
 def worldcup_help(update, context):
     text = '⚽World Cup 2022 Functions are now LIVE!🏆\n\n'
     text += '/worldcup tdy - Get today\'s matches\n'
@@ -92,13 +97,8 @@ def worldcup_get_match_by_date(jwt, reply, date):
     return reply
 
 def worldcup_standing(update, context, jwt, letter):
-    reply = 'Current standings:\n\n'
-    letter = letter.upper()
-    a = bool(groupLetter(letter))
-    if not bool(groupLetter(letter)):
-        update.message.reply_text('Invalid Input, Please input /worldcup standings [Group]. Group A to H')
-
     groupStandings = wc_api_get_standings(jwt, letter)
+    reply = 'Current standings:\n\n'
 
     reply += 'Group: ' + letter + '\n\n'
     teams = groupStandings[0]['teams']
