@@ -11,7 +11,7 @@ WORLDCUP_API_PASSWORD = os.environ.get("WORLDCUP_API_PASSWORD")
 WORLDCUP_API_URL = "http://api.cup2022.ir/api/v1"
 
 def get_flag(country):
-    with open('data/flags.json', 'r') as f:
+    with open('data/flags.json', 'r', encoding="utf-8") as f:
         flags = json.load(f)
         return flags[country]
 
@@ -40,5 +40,23 @@ def wc_api_get_match_by_date(jwt, date):
 
     # filter data with key 'local_date' that contains '11/21/2022'
     data = list(filter(lambda x: date in x['local_date'], data))
+
+    return data
+
+
+def wc_api_get_standings(jwt, letter):
+    url = WORLDCUP_API_URL + '/standings'
+
+    headers = {
+        'Authorization': 'Bearer ' + jwt,
+        'Content-Type': 'application/json'
+    }
+
+    # use requests to post the data
+    response = requests.get(url, headers=headers)
+
+    data = json.loads(response.text)['data']
+
+    data = list(filter(lambda x: letter in x['group'], data))
 
     return data

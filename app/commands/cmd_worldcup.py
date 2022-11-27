@@ -1,4 +1,5 @@
 import sys
+import re
 
 from datetime import datetime, timedelta
 
@@ -12,6 +13,8 @@ matchStatus = {
     'notstarted': 'Not Started',
 }
 
+groupLetter = re.compile('^[a-hA-H]$').search
+
 def worldcup(update, context):
     if not context.args or context.args[0] == 'help':
         worldcup_help(update, context)
@@ -24,6 +27,9 @@ def worldcup(update, context):
     elif context.args[0] == 'tmr':
         jwt = wc_api_login()
         worldcup_tmr(update, context, jwt)
+    elif context.args[0] == 'standings':
+        jwt = wc_api_login()
+        worldcup_standing(update, context, jwt, context.args[1])
     else:
         worldcup_error(update, context)
 def worldcup_help(update, context):
@@ -31,6 +37,7 @@ def worldcup_help(update, context):
     text += '/worldcup tdy - Get today\'s matches\n'
     text += '/worldcup ytd - Get yesterday\'s matches\n'
     text += '/worldcup tmr - Get tomorrow\'s matches\n'
+    text += '/worldcup standings [Group] - Get current standings, Group A to H (e.g. /worldcup standings H)'
     update.message.reply_text(text)
 
 def worldcup_error(update, context):
@@ -83,3 +90,31 @@ def worldcup_get_match_by_date(jwt, reply, date):
             match['time_elapsed']] + ')' + '\n\n'
 
     return reply
+
+def worldcup_standing(update, context, jwt, letter):
+    reply = 'Current standings:\n\n'
+    letter = letter.upper()
+    a = bool(groupLetter(letter))
+    if not bool(groupLetter(letter)):
+        update.message.reply_text('Invalid Input, Please input /worldcup standings [Group]. Group A to H')
+
+    groupStandings = wc_api_get_standings(jwt, letter)
+
+    reply += 'Group: ' + letter + '\n\n'
+    teams = groupStandings[0]['teams']
+    for team in teams:
+        reply += get_flag(team['name_en']) + team['name_en'] + '\n'
+        reply += 'Matches played: ' + team['mp'] + '\n'
+        reply += 'Matches won: ' + team['w'] + '\n'
+        reply += 'Matches lost: ' + team['l'] + '\n'
+        reply += 'Score: ' + team['pts'] + '\n'
+        reply += 'Goals for: ' + team['gf'] + '\n'
+        reply += 'Goals against: ' + team['ga'] + '\n'
+        reply += 'Goals difference: ' + team['gd'] + '\n'
+        reply += 'Drawn: ' + team['d'] + '\n'
+        reply += '\n'
+    reply += '\n\n'
+
+    update.message.reply_text(reply)
+
+
