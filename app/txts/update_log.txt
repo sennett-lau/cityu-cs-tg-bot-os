@@ -1,3 +1,6 @@
+2022-11-27 19:25
+added /worldcup standings [Group] command
+
 2022-11-27 01:16
 hotfix on /worldcup command prompt
 
