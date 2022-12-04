@@ -54,6 +54,8 @@ def worldcup_tdy(jwt):
     reply = 'Today\'s matches:\n\n'
 
     today = datetime.now().strftime('%m/%d/%Y')
+    if today[3] == '0':
+        today = today[0:3] + today[4:]
 
     return worldcup_get_match_by_date(jwt, reply, today)
 
@@ -63,6 +65,8 @@ def worldcup_ytd(jwt):
     ytd = datetime.now()
     ytd = ytd - timedelta(hours=24)
     ytd = ytd.strftime('%m/%d/%Y')
+    if ytd[3] == '0':
+        ytd = ytd[0:3] + ytd[4:]
 
     return worldcup_get_match_by_date(jwt, reply, ytd)
 
@@ -72,6 +76,8 @@ def worldcup_tmr(jwt):
     tmr = datetime.now()
     tmr = tmr + timedelta(hours=24)
     tmr = tmr.strftime('%m/%d/%Y')
+    if tmr[3] == '0':
+        tmr = tmr[0:3] + tmr[4:]
 
     return worldcup_get_match_by_date(jwt, reply, tmr)
 

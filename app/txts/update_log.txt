@@ -1,3 +1,6 @@
+2022-12-04 19:38
+hotfix on /worldcup tdy, ytd and tmr commands
+
 2022-11-27 19:25
 added /worldcup standings [Group] command
 
