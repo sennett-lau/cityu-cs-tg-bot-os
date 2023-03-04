@@ -34,6 +34,7 @@ def main():
     dp.add_handler(CommandHandler('wantpokemon', wantpokemon))
     dp.add_handler(CommandHandler('my903', my903))
     dp.add_handler(CommandHandler('crypto', crypto))
+    dp.add_handler(CommandHandler('pbandai', pbandai))
 
     dp.add_handler(CommandHandler("start", start, filters=~Filters.group))
     dp.add_handler(CommandHandler('pin', pin, filters=~Filters.group))

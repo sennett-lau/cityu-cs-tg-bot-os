@@ -8,3 +8,4 @@ from .cmd_start import *
 from .cmd_updatelog import *
 from .cmd_wantpokemon import *
 from .cmd_worldcup import *
+from .cmd_pbandai import *
