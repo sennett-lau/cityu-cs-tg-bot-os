@@ -34,7 +34,6 @@ def main():
     dp.add_handler(CommandHandler('wantpokemon', wantpokemon))
     dp.add_handler(CommandHandler('my903', my903))
     dp.add_handler(CommandHandler('crypto', crypto))
-    dp.add_handler(CommandHandler('worldcup', worldcup))
 
     dp.add_handler(CommandHandler("start", start, filters=~Filters.group))
     dp.add_handler(CommandHandler('pin', pin, filters=~Filters.group))
@@ -66,5 +65,4 @@ geguide - get quick link to ge guide
 wantpokemon - send you a pokemon!
 my903 - check out this week's top 10 songs
 crypto - check crypto price
-worldcup - check world cup 2022 info
 '''
